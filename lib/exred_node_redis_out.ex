@@ -26,6 +26,8 @@ defmodule Exred.Node.RedisOut do
     command: %{type: "select", value: "SET", attrs: %{options: ["SET", "LPUSH", "LPUSHX", "LSET"]}},
     name: %{type: "string", value: ""}
   }
+  @ui_attributes %{right_icon: "send" }
+  
   
   use Exred.Library.NodePrototype
 
