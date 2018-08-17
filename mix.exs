@@ -1,12 +1,16 @@
 defmodule Exred.Node.RedisOut.Mixfile do
   use Mix.Project
 
+  @description "Writes to Redis"
+
   def project do
     [
       app: :exred_node_redis_out,
       version: "0.1.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
+      description: @description,
+      package: package(),
       deps: deps()
     ]
   end
@@ -25,8 +29,8 @@ defmodule Exred.Node.RedisOut.Mixfile do
       {:ex_doc, "~> 0.18.0", only: :dev, runtime: false}
     ]
   end
-  
-  
+
+
   defp package do
     %{
       licenses: ["MIT"],
