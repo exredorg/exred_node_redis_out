@@ -27,7 +27,9 @@ defmodule Exred.Node.RedisOut.Mixfile do
   defp deps do
     [
       {:exred_nodeprototype, "~> 0.2"},
-      {:ex_doc, "~> 0.19.0", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.19.0", only: :dev, runtime: false},
+      {:exred_node_redis_daemon, "~> 0.2.0", only: :test},
+      {:exred_nodetest, "~> 0.1.0", only: :test}
     ]
   end
 
